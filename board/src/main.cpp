@@ -120,7 +120,7 @@ void connectMqtt() {
 
   Serial.print("MQTT connecting... ");
   // Last will: "offline", retained, on status
-  if (mqtt.connect(clientId.c_str(), TOPIC_STATUS.c_str(), 1, true, "offline")) {
+    if (mqtt.connect(clientId.c_str(), MQTT_NAME, NULL, TOPIC_STATUS.c_str(), 1, true, "offline")) {
     Serial.println("connected");
     mqtt.publish(TOPIC_STATUS.c_str(), "online", true);
     mqtt.subscribe(TOPIC_SETTINGS.c_str(), 1);
