@@ -142,7 +142,6 @@ def put_settings(mac: str, body: SettingsIn, response: Response):
         retain=True,
         hostname=MQTT_HOST,
         port=MQTT_PORT,
-        auth={"username": MQTT_NAME},
     )
 
 
